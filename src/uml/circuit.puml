@@ -1,0 +1,34 @@
+@startuml Circuit
+interface Voiture {
+     + accelerer():void  
+     + tourner(): void
+     + freiner(): void
+}
+class Mercedes {
+     {static} - couleur: Noir
+}
+class Ferrari {
+     {static} - couleur: Rouge
+}
+class Renault {
+     {static} - couleur: Bleu
+}
+class Circuit
+class SafetyCar {
+     {static} - instance: SafetyCar
+     {static} + getInstance(): SafetyCar
+}
+     
+class CircuitDeCourseDeFormuleUn {
+     # getVoiture(Voituretype type): Voiture
+}
+enum VoitureType
+
+Voiture <|.. Mercedes
+Voiture <|.. Ferrari
+Voiture <|.. Renault
+
+Circuit ..> SafetyCar : Design-pattern = Singleton
+Circuit ..> Voiture : Design-pattern = Factory
+
+@enduml
