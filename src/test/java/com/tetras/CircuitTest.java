@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CircuitTest {
 
     @Test
-    public void testSingleton() {
+    public void testSafetyCar() {
             SafetyCar maSafetyCar1 = SafetyCar.getInstance();
             SafetyCar maSafetyCar2 = SafetyCar.getInstance();
             assertEquals(maSafetyCar1, maSafetyCar2);
@@ -24,7 +24,6 @@ class CircuitTest {
         Voiture executor = VoitureDuChampionnatDeFormuleUnFactory.getVoiture(VoitureType.mercedes);
         assertTrue(executor instanceof mercedes);
         assertExecutor(executor);
-        assertEquals("noir", executor.getcouleur());
     }
 
     @Test
@@ -32,7 +31,6 @@ class CircuitTest {
         Voiture executor = VoitureDuChampionnatDeFormuleUnFactory.getVoiture(VoitureType.ferrari);
         assertTrue(executor instanceof ferrari);
         assertExecutor(executor);
-        assertEquals("rouge", executor.getcouleur());
     }
     
     @Test
@@ -40,8 +38,24 @@ class CircuitTest {
         Voiture executor = VoitureDuChampionnatDeFormuleUnFactory.getVoiture(VoitureType.renault);
         assertTrue(executor instanceof renault);
         assertExecutor(executor);
-        assertEquals("bleu", executor.getcouleur());
     }
 
+    @Test
+    public void testCouleurMercedes() {
+        Voiture executor = VoitureDuChampionnatDeFormuleUnFactory.getVoiture(VoitureType.mercedes);
+        assertEquals("noir", executor.getcouleur());
+    }
+
+    @Test
+    public void testCouleurFerrari() {
+        Voiture executor = VoitureDuChampionnatDeFormuleUnFactory.getVoiture(VoitureType.ferrari);
+        assertEquals("rouge", executor.getcouleur());
+    }
+    
+    @Test
+    public void testCouleurRenault() {
+        Voiture executor = VoitureDuChampionnatDeFormuleUnFactory.getVoiture(VoitureType.renault);
+        assertEquals("bleu", executor.getcouleur());
+    }
     
 }

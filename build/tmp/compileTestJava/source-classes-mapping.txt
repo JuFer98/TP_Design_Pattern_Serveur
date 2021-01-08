@@ -1,4 +1,2 @@
-com/tetras/SafetyCarTest.java
- com.tetras.SafetyCarTest
-com/tetras/VoitureTest.java
+com/tetras/CircuitTest.java
  com.tetras.CircuitTest
