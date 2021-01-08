@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tetras.CircuitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-01-07T16:17:37" hostname="DESKTOP-M2M11R3" time="0.079">
+  <properties/>
+  <testcase name="testFerrari()" classname="com.tetras.CircuitTest" time="0.068"/>
+  <testcase name="testMercedes()" classname="com.tetras.CircuitTest" time="0.002"/>
+  <testcase name="testRenault()" classname="com.tetras.CircuitTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
