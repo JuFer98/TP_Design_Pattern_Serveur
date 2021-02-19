@@ -4,10 +4,9 @@ interface Requete {
 }
 class RequeteHttp {
     - requete : List<requete>
-    - lurl : URL
-    - header : Header
-    - content : Body
     + ajouter(requete): void
+    + afficher(): void
+    + 
 }
 
 class URL {
@@ -20,7 +19,7 @@ class Body {
      {static} - content: string
 }
 class ServeurWeb {
-     {static} + repondre(): Int
+     {static} + repondre(requête): Int
 }
 
 ServeurWeb -- RequeteHttp 
