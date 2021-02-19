@@ -6,7 +6,7 @@ class RequeteHttp {
     - requete : List<requete>
     + ajouter(requete): void
     + afficher(): void
-    + 
+    + exceptions(): void 
 }
 
 class URL {
